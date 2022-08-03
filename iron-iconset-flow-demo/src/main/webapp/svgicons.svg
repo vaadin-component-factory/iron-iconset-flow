@@ -1,0 +1,8 @@
+<svg>
+    <defs>
+        <g id="shape">
+            <rect x="12" y="0" width="12" height="24"></rect>
+            <circle cx="12" cy="12" r="12"></circle>
+        </g>
+    </defs>
+</svg>
