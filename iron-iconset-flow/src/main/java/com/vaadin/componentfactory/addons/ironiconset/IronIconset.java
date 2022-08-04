@@ -67,8 +67,9 @@ public class IronIconset extends Component {
         public ClassResourceFactory(String fileName) throws FileNotFoundException {
             Objects.requireNonNull(fileName, "The fileName can't be null");
             this.fileName = fileName;
-            URL resource = this.getClass().getClassLoader()
-                    .getResource(fileName);
+
+            URL resource = this.getClass().getClassLoader().getResource("./META-INF/resources/" + fileName);
+            if(resource == null) resource = this.getClass().getClassLoader().getResource(fileName);
             if (resource != null) {
                 file = new File(resource.getFile());
                 try {
